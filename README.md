@@ -74,7 +74,7 @@ You can specify such prefix in options:
 
 ```typescript
 const validator = new OpenApiValidator({
-    apiPathPrefix: '/core'
+    apiPathPrefix: '/core',
     openApiSpecPath: "./.temp/open_api_docs.json",
 });
 

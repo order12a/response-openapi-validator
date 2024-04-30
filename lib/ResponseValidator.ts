@@ -87,7 +87,7 @@ export class ResponseValidator {
             return result
         }
         const matchingPaths = await this.findMatchingPathInDocs(response.requestUrl)
-        const schemas = Object.values<OpenAPIV2.PathsObject>(matchingPaths)
+        const schemas = Object.values<OpenAPIV3.PathsObject>(matchingPaths)
             .map(pathObj => findSchemaInPath(pathObj[response.method.toLowerCase()]?.responses[response.statusCode]))
             .filter(schema => schema !== undefined && schema !== null)
 
